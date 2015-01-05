@@ -76,21 +76,6 @@ public class LingAnalysis {
 	 *   if the word is not in the map, add the word with a value of one.
 	 */
 	static Map<String, Integer> frequencyDist(Path p) {
-		Map<String, Integer> freq = new HashMap<String, Integer>();
-		
-		try {
-			BufferedReader br = Files.newBufferedReader(p, StandardCharsets.UTF_8);
-			
-			for(String line = br.readLine(); line!=null; line = br.readLine()) {
-				System.out.println(line);
-			}
-			
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		return null;
 	}
 }
