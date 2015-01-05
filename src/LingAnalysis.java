@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -5,13 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
 public class LingAnalysis {
 	public static void main(String[] args) {
-		Path source = Paths.get("corpora/alice-in-wonderland.txt");
+		Path source = Paths.get("corpora/tester.txt");
 		Path output = Paths.get("generated.txt");
 		
 		Map<String, Integer> freq = frequencyDist(source);
@@ -74,7 +76,44 @@ public class LingAnalysis {
 	 *   if the word is not in the map, add the word with a value of one.
 	 */
 	static Map<String, Integer> frequencyDist(Path p) {
+		Map<String, Integer> freq = new HashMap<String, Integer>();
+		
+		try {
+			BufferedReader br = Files.newBufferedReader(p, StandardCharsets.UTF_8);
+			
+			for(String line = br.readLine(); line!=null; line = br.readLine()) {
+				System.out.println(line);
+			}
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
